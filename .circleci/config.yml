@@ -36,8 +36,8 @@ jobs:
           command: |
             docker build -t panchapol/hello_nodejs:latest .
             docker build -t panchapol/hello_nodejs:${CIRCLE_SHA1} .
-            docker push -t panchapol/hello_nodejs:latest
-            docker push -t panchapol/hello_nodejs:${CIRCLE_SHA1}
+            docker push panchapol/hello_nodejs:latest
+            docker push panchapol/hello_nodejs:${CIRCLE_SHA1}
       - run: echo Done
 
 
